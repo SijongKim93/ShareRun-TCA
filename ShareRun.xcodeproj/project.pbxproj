@@ -17,6 +17,7 @@
 		4D956A5A2CA1B71C002960E7 /* RunningAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D956A592CA1B71C002960E7 /* RunningAction.swift */; };
 		4D956A5C2CA1B7C7002960E7 /* RunningEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D956A5B2CA1B7C7002960E7 /* RunningEnvironment.swift */; };
 		4D956A5E2CA1B7FC002960E7 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D956A5D2CA1B7FC002960E7 /* LocationManager.swift */; };
+		4D956A602CA1BA0E002960E7 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D956A5F2CA1BA0E002960E7 /* HealthKitManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		4D956A592CA1B71C002960E7 /* RunningAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningAction.swift; sourceTree = "<group>"; };
 		4D956A5B2CA1B7C7002960E7 /* RunningEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningEnvironment.swift; sourceTree = "<group>"; };
 		4D956A5D2CA1B7FC002960E7 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		4D956A5F2CA1BA0E002960E7 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				4D956A592CA1B71C002960E7 /* RunningAction.swift */,
 				4D956A5B2CA1B7C7002960E7 /* RunningEnvironment.swift */,
 				4D956A5D2CA1B7FC002960E7 /* LocationManager.swift */,
+				4D956A5F2CA1BA0E002960E7 /* HealthKitManager.swift */,
 				4D956A482CA1B54A002960E7 /* Assets.xcassets */,
 				4D956A4A2CA1B54A002960E7 /* Preview Content */,
 			);
@@ -162,6 +165,7 @@
 			files = (
 				4D956A532CA1B591002960E7 /* RunningRecord.swift in Sources */,
 				4D956A5C2CA1B7C7002960E7 /* RunningEnvironment.swift in Sources */,
+				4D956A602CA1BA0E002960E7 /* HealthKitManager.swift in Sources */,
 				4D956A472CA1B547002960E7 /* ContentView.swift in Sources */,
 				4D956A5E2CA1B7FC002960E7 /* LocationManager.swift in Sources */,
 				4D956A452CA1B547002960E7 /* ShareRunApp.swift in Sources */,
