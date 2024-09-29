@@ -6,6 +6,7 @@
 //
 
 import ComposableArchitecture
+import CoreLocation
 import MapKit
 
 struct RunningState: Equatable {

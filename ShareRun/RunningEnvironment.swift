@@ -6,7 +6,10 @@
 //
 
 import Foundation
+import CombineSchedulers
 
 struct RunningEnvironment {
-    var locationManager: LocationMa
+    var locationManager: LocationManager
+    var healthKitManager: HealthKitManager
+    var mainQueue: AnySchedulerOf<DispatchQueue>
 }
