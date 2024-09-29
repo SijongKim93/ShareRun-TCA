@@ -8,7 +8,7 @@
 import Foundation
 import CoreLocation
 
-struct RunningRecord: Identifiable {
+struct RunningRecord: Identifiable, Equatable {
     let id = UUID()
     var distance: Double
     var bpm: Int
