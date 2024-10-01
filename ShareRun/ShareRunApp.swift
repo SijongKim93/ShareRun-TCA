@@ -6,9 +6,15 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct ShareRunApp: App {
+    let store = Store(
+        initialState: RunningFeature.RunningState(),
+        reducer: RunningFeature()
+    )
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
