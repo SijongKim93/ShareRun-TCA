@@ -73,16 +73,6 @@ struct RunningView: View {
                         .cornerRadius(10)
 
                     // Start Running Button
-                    Button(action: {
-                        viewStore.send(.startRunning)
-                    }) {
-                        Text("Start Running")
-                            .font(.title)
-                            .padding()
-                            .background(Color.green)
-                            .cornerRadius(10)
-                            .foregroundColor(.white)
-                    }
                 }
             }
             .padding()
