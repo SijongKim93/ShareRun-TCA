@@ -58,7 +58,45 @@ struct RunningFeature {
                     .receive(on: mainQueue)
                     .eraseToEffect()
                 
-                return .merge(locationStream, heartRateStream)
+                let cadenceStream = healthKitManager.startCadenceUpdates()
+                    .map(RunningAction.cadenceUpdated)
+                    .receive(on: mainQueue)
+                    .eraseToEffect()
+                
+                return .merge(locationStream, heartRateStream, cadenceStream)
+                
+            case let .locationUpdated(newLocation):
+                if let lastLocation = state.locationHistory.last {
+                    let lastCoord = CLLocation(latitude: lastLocation.latitude, longitude: newLocation.longitude)
+                    let currentCoord = CLLocation(latitude: lastLocation.latitude, longitude: newLocation.longitude)
+                    state.distance += lastCoord.distance(from: currentCoord)
+                }
+                
+                state.currentLocation = newLocation
+                state.locationHistory.append(newLocation)
+                
+                return .none
+                
+            case .stopRunning:
+                state.isRunning = false
+                state.endTime = Date()
+                return .send(.saveRunRecord)
+                
+            case .saveRunRecord:
+                let record = RunningRecord(
+                    startTime: state.startTime!,
+                    endTime: state.endTime!,
+                    distance: state.distance,
+                    heartRate: state.heartRate,
+                    cadence: state.cadence,
+                    locationHistory: state.locationHistory
+                )
+                state.record = record
+                print("런닝 기록 저장 \(record)")
+                return .none
+                
+            default:
+                return .none
             }
         }
     }
